@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background: #fff;
+        background-image: url("image1.jpg");
+      }
+
+      .navbar {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.9);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar.scrolled {
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      .hero {
+        min-height: 100vh;
+        background: url("https://via.placeholder.com/1920x1080") no-repeat
+          center center/cover;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+        position: relative;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .hero .content {
+        animation: slideIn 1s ease-in-out;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .section {
+        padding: 60px 20px;
+      }
+
+      #thonnai {
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        height: 150px;
+      }
+
+      .card {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .experience-section .card {
+        background: linear-gradient(135deg, #fff, #f9f9f9);
+      }
+
+      footer {
+        background-color: #111;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        animation: fadeInFooter 1s ease-in-out;
+      }
+
+      @keyframes fadeInFooter {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 10px rgba(0, 123, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Bharathi Raja - Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="content">
+          <h1>Bharathi Raja</h1>
+          <p>Python Developer | Backend Specialist | 1.5+ Years Experience</p>
+          <a href="#about" class="btn btn-primary btn-lg mt-4">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container text-center" id="thonnai">
+        <h2>About Me</h2>
+        <p>
+          Detail-oriented Python Developer with 1.5 years of experience in
+          building scalable backend systems using Flask and Django. Expertise in
+          MongoDB, SQL integration, API development, and performance
+          optimization. Passionate about improving efficiency through automation
+          and collaboration with cross-functional teams.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <h2
+          class="text-center"
+          style="background-color: white; display: inline-block; margin-left:500px; border-radius:10px; width:350px;"
+        >
+          Work Experience
+        </h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Python Developer</h4>
+                <h6>Industrial Soft Solutions & Systems</h6>
+                <p><em>2023 - Present</em></p>
+                <ul>
+                  <li>
+                    Developed and maintained backend systems using Python.
+                  </li>
+                  <li>
+                    Integrated MongoDB and SQL for efficient data storage and
+                    retrieval.
+                  </li>
+                  <li>Designed and implemented RESTful APIs.</li>
+                  <li>
+                    Collaborated with frontend developers to create seamless web
+                    applications.
+                  </li>
+                  <li>
+                    Utilized Flask and Django for creating web applications and
+                    APIs.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container text-center">
+        <h2 style="background-color: white; display: inline-block; border-radius:10px;width:300px;">
+          Key Projects
+        </h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">E-Commerce Application Development</h5>
+                <p class="card-text">
+                  Implemented secure authentication, role-based permissions, and
+                  dynamic add-to-cart and checkout functionalities. Developed
+                  with Django, Python, HTML, and CSS, deployed on Heroku.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">YOLO-Based Object Detection</h5>
+                <p class="card-text">
+                  Collected and curated a custom dataset of images, trained a
+                  YOLO model for object detection, and deployed the model for
+                  effective object tracking in videos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Mobile Applications</h5>
+                <p class="card-text">
+                  Developed mobile applications using Flutter technology for
+                  garment industry tasks like machine tracking, barcode
+                  scanning, and quality checking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+      <div class="container text-center">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong> bharathiraja9708@gmail.com</p>
+        <p><strong>Phone:</strong> 9025062797</p>
+        <p>
+          <strong>LinkedIn:</strong>
+          <a
+            href="http://www.linkedin.com/in/bharathiraja-v-a6633a25b"
+            target="_blank"
+            >Bharathi Raja</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Bharathi Raja. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
+      });
+    </script>
+  </body>
+</html>
