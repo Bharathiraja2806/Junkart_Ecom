@@ -146,10 +146,10 @@
           <li class="list-group-item"><b>Price</b>    : {{product.price}}</li>
         </ul>
 
-        <div class="card-footer" style="background-color:white">
+        {% comment %} <div class="card-footer" style="background-color:white">
           <a href="{% url 'product_desc' product.pk %}" class="btn btn-dark">View More</a>
           
-        </div>
+        </div> {% endcomment %}
       </div>
     </div>
   {% endfor %}

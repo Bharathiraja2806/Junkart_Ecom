@@ -146,6 +146,15 @@
       {% endfor %} {% endif %}
 
       <button type="submit">Login</button>
+      <p style="text-align: center; margin-top: 20px">
+        Don't have an account?
+        <a
+          href="{% url 'user_register' %}"
+          style="color: #23a2f6; text-decoration: none; font-weight: bold"
+        >
+          Register Here
+        </a>
+      </p>
     </form>
   </body>
 </html>

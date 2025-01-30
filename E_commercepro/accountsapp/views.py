@@ -27,7 +27,9 @@ def user_register(request):
         confirm_password = request.POST.get('confirm_password')
         phone = request.POST.get('phone')
 
-        if password == confirm_password:
+        if username == '' and password == '':
+            messages.info(request, "Pls enter username or password!")
+        elif password == confirm_password:
             if User.objects.filter(username = username).exists():
                 messages.info(request, "Username already Exists!")
                 return redirect('user_register')
